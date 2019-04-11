@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+    <title>My first website taha murtaza </title>
+    <script>
+        function showhide() {
+            answer = document.getElementById("answer");
+            if (answer.style.display == "none")
+                answer.style.display = "block";
+            else
+                answer.style.display = "none";
+        }
+
+        function submit(answer) {
+            var submit = document.getElementById("submit");
+            document.getElementById("answer").style.visibility = "visible";
+            if (answer === "jeff kinney" || answer === "Jeff Kinney") {
+                alert("Correct answer");
+                submit.value = "";
+            }
+            else {
+                alert("Wrong answer");
+                submit.value = "";
+            }
+        }
+
+    </script>
+    <style>
+        body {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <marquee width="100%" direction="up" height="100%"> -->
+    <h1>hello i am Taha Murtaza and this is my first website i hope it would be good</h1>
+    <h1>I will show you a picture and you have to guess it!</h1>
+
+    <h2>The author of wimpy kid is _______.</h2>
+    Answer: <input id="submit" type="text">
+    <button onclick="submit(document.getElementById('submit').value)" id="showButton"
+        style="width:200px;height:50px">submit</button>
+    <button onclick="showhide()" id="showButton" style="width:200px;height:50px">show/hide</button>
+    <h2 id="answer" style="display :none;">jeff kinney</h2>
+    <!-- </marquee>-->
+</body>
+
+</html>
