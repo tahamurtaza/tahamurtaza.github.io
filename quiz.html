@@ -1,0 +1,74 @@
+<html>
+<head>
+
+    <title>our cool and awesome website </title>
+    <script>
+        function showhide(answer) {
+            var answer = document.getElementById(answer);
+            if (answer.style.display == "none")
+                answer.style.display = "block";
+            else
+                answer.style.display = "none";
+        }
+
+        function submit(input) {
+            var answer = document.getElementById(input).value;
+            var submit = document.getElementById("submit");
+
+            if (input === "submit1") {
+                if (answer === " kinney" || answer === "Jeff Kinney") {
+                    alert("Correct answer");
+                    submit.value = "";
+                }
+                else {
+                    alert("Wrong answer");
+                    submit.value = "";
+                }
+            }
+            if (input === "submit2") {
+                if (answer === "Donald Trump" || answer === "donald trump") {
+                    alert("Correct answer");
+                    submit.value = "";
+                }
+                else {
+                    alert("Wrong answer");
+                    submit.value = "";
+                }
+            }
+
+        }
+    </script>
+    <style>
+        body {
+            /* See it works */
+            background-size:cover; 
+            background-image:url('water.jpg');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello I am Taha Murtaza and this is my first website I hope it would be good</h1>
+    <h1>I will show you a picture and you have to guess it!</h1>
+    <img src="jeff.jpg" alt="">
+    <h2>The author of wimpy kid is _______.</h2>
+    Answer: <input id="submit1" type="text">
+    <button onclick="submit('submit1')" id="showButton" style="width:200px;height:50px">submit</button>
+    <button onclick="showhide('answer1')" id="showButton" style="width:200px;height:50px">show/hide</button>
+    <h2 id="answer1" style="display :none;">Jeff Kinney</h2>
+    <br>
+    <img src="p.a.jpg" style="width:230px;height:230px"> 
+    
+    <h2>The president of USA is _______.</h2>
+    Answer: <input id="submit2" type="text">
+    <button onclick="submit('submit2')" id="showButton" style="width:200px;height:50px">submit</button>
+    <button onclick="showhide('answer2')" id="showButton" style="width:200px;height:50px">show/hide</button>
+    <h2 id="answer2" style="display :none;">Donald Trump</h2>
+
+    <h1>special thanks to my brother for helping me in this website</h1>
+     <img src="ali.jpg" alt="">
+
+</body>
+
+</html>
