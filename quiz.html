@@ -12,13 +12,13 @@
                 answer.style.display = "none";
         }
 
-        function submit(input) { 
+        function submit(input) {
             var answer = document.getElementById(input).value;
             var submit = document.getElementById("submit");
 
             if (input === "submit1") {
                 if (answer.toUpperCase() === "JEFF KINNEY") {
-                    
+
                     alert("Correct answer");
                     submit.value = "";
                 }
@@ -28,7 +28,7 @@
                 }
             }
             if (input === "submit2") {
-                if (answer === "Donald Trump" || answer === "donald trump") {
+                if (answer.toUpperCase() === "DONALD TRUMP") {
                     alert("Correct answer");
                     submit.value = "";
                 }
