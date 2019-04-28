@@ -2,8 +2,12 @@
 
 <head>
 
-    <title>our cool and awesome website </title>
+    <title>Our cool and awesome website </title>
     <script>
+
+
+        var score = 0;
+
         function showhide(answer) {
             var answer = document.getElementById(answer);
             if (answer.style.display == "none")
@@ -13,15 +17,18 @@
         }
 
         function submit(input) {
+      
             var answer = document.getElementById(input).value;
-            var submit = document.getElementById("submit");
+            var submit = document.getElementById(input);
 
             if (input === "submit1") {
                 if (answer.toUpperCase() === "JEFF KINNEY") {
 
                     alert("Correct answer");
+
+                    score = score + 1;
                     submit.value = "";
-                    <div class="count">1</div>
+
                 }
                 else {
                     alert("Wrong answer");
@@ -31,14 +38,18 @@
             if (input === "submit2") {
                 if (answer.toUpperCase() === "DONALD TRUMP") {
                     alert("Correct answer");
-                    <div class="count">2</div>
+                    score = score + 1;
                     submit.value = "";
                 }
                 else {
                     alert("Wrong answer");
-                    submit.value = "";
+                    submit.value = ""; 
                 }
             }
+              
+            // Update score_text
+            document.getElementById("score_text").innerHTML = score;
+
 
         }
     </script>
@@ -50,12 +61,12 @@
             background-repeat: no-repeat;
         }
     </style>
-</head>
 
 <body>
-        <div class="count">0</div>
+
     <h1>Hello I am Taha Murtaza and this is my first website I hope it would be good</h1>
     <h1>I will show you a picture and you have to guess it!</h1>
+    <h1>Score: <span id="score_text">0</span></h1>
     <img src="jeff.jpg" alt="">
     <h2>The author of wimpy kid is _______.</h2>
     Answer: <input id="submit1" type="text">
