@@ -45,6 +45,18 @@
                 }
             }
 
+                if (input === "submit3") {
+                if (answer.toUpperCase() === "SHEIKH ZAYED") {
+                    alert("Correct answer");
+                    score = score + 1;
+                    submit.value = "";
+                }
+                else {
+                    alert("Wrong answer");
+                    submit.value = "";
+                }
+            }
+
             // Update score_text
             document.getElementById("score_text").innerHTML = score;
 
@@ -99,6 +111,34 @@
       </form>
 
       <button onclick="submit('submit1')" id="showButton" style="width:200px;height:50px">submit</button>
+
+ <br>
+    <img src="sheikh.jpg" style="width:230px;height:230px">
+
+    <h2>The president of UAE is _______.</h2>
+    Answer: <input id="submit3" type="text">
+    <button onclick="submit('submit3')" id="showButton" style="width:200px;height:50px">submit</button>
+    <button onclick="showhide('answer3')" id="showButton" style="width:200px;height:50px">show/hide</button>
+    <h2 id="answer3" style="display :none;">sheikh zayed</h2>
+    <br>
+    <h2>how many states are their in india<h2/>
+
+<td class="bix-td-option" width="1%" id="tdOptionNo_A_337"><a id="lnkOptionLink_A_337" href="javascript: void 0;">A.</a>
+</td>
+<td class="bix-td-option" width="99%" id="tdOptionDt_A_337">34</td>
+<br>
+<td class="bix-td-option" width="1%" id="tdOptionNo_A_337"><a id="lnkOptionLink_A_337" href="javascript: void 0;">B.</a>
+</td>
+<td class="bix-td-option" width="99%" id="tdOptionDt_A_337">30</td>
+<br>
+<td class="bix-td-option" width="1%" id="tdOptionNo_A_337"><a id="lnkOptionLink_A_337" href="javascript: void 0;">C.</a>
+</td>
+<td class="bix-td-option" width="99%" id="tdOptionDt_A_337">29</td>
+<br>
+<td class="bix-td-option" width="1%" id="tdOptionNo_A_337"><a id="lnkOptionLink_A_337" href="javascript: void 0;">D.</a>
+</td>
+<td class="bix-td-option" width="99%" id="tdOptionDt_A_337">32</td>
+
 
     <h1>special thanks to my brother for helping me in this website</h1>
     <img src="ali.jpg" alt="">
