@@ -6,22 +6,67 @@
         body {
             background-color: aqua;
         }
+
+
+    .btn-group .button {
+      background-color: #4CAF50; /* Green */
+      border: 1px solid green;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      float: left;
+    }
+    
+    
+    
+    .btn-group .button:hover {
+      background-color: #3e8e41;
+    }
     </style>
 </head>
 
 <body>
 
-    <h2>Welcome to Taha's Quiz</h2>
+    <h2>Welcome to Taha Murtaza's Quiz</h2>
 
     <!-- <a href='quiz.html'>Start Quiz Now!</a> -->
     <br> 
     <img src="quiz time.jpg" style="width:240px;height:150px">
-
+    <h1>which subject?</h1>
     <form action="general_knowlegde.html">
         <br>
-        <input type="submit" value="general knowlegde" />
+        <div class="btn-group">
+            <button class="button"style="width:200px;height:50px">general knowlegde</button>
+    </form>
+    <br>
+    <br>
+    <form action="math.html">
+        <br>
+        <div class="btn-group">
+            <button class="button"style="width:200px;height:50px">math</button>
+    </form>
+    <br>
+    <br>
+    <form action="english.html">
+        <br>
+        <div class="btn-group">
+            <button class="button"style="width:200px;height:50px">english</button>
+    </form>
+ <br>
+ <br>
+    <form action="science.html">
+        <br>
+        
+        <div class="btn-group">
+            <button class="button"style="width:200px;height:50px">science</button>  
+          </div>
     </form>
 
+    
 </body>
 
 </html>
