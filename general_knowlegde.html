@@ -2,7 +2,7 @@
 
 <head>
     <title>general knowlegde quiz</title>
-    
+
     <script>
 
         var score = 0;
@@ -20,7 +20,7 @@
             var answer;
 
             if (type === "radio") {
-                answer = document.forms[input].states.value;
+                answer = document.forms[input].options.value;
             } else {
                 answer = document.getElementById(input).value;
             }
@@ -71,7 +71,7 @@
                     submit.value = "";
                 }
                 else {
-                    alert("Wrong answer"); 
+                    alert("Wrong answer");
                     submit.value = "";
                 }
             }
@@ -111,6 +111,7 @@
                 else {
                     alert("Wrong answer");
                 }
+                submit.value = "";
             }
 
             if (input === "submit8") {
@@ -122,6 +123,7 @@
                 else {
                     alert("Wrong answer");
                 }
+                submit.value = "";
             }
 
             if (input === "submit9") {
@@ -133,10 +135,11 @@
                 else {
                     alert("Wrong answer");
                 }
+                submit.value = "";
             }
-            
-           
-          
+
+
+
 
             // Update score_text
             document.getElementById("score_text").innerHTML = score;
@@ -196,16 +199,16 @@
     <br>
 
     <div class="cities">
-           
+
         <h2>London</h2>
         <p>London is the capital of</p>
-        </div> 
+        </div>
         Answer: <input id="submit4" type="text">
         <button onclick="submit('submit4','text')" id="showButton" style="width:200px;height:50px">submit</button>
         <button onclick="showhide('answer4')" id="showButton" style="width:200px;height:50px">show/hide</button>
         <h2 id="answer4" style="display :none;">England</h2>
         <br>
-        
+
         <div class="cities">
         <h2>Paris</h2>
         <p>Paris is the capital of </p>
@@ -215,7 +218,7 @@
         <button onclick="showhide('answer5')" id="showButton" style="width:200px;height:50px">show/hide</button>
         <h2 id="answer5" style="display :none;">France</h2>
         <br>
-        
+
         <div class="cities">
         <h2>Tokyo</h2>
         <p>Tokyo is the capital of </p>
@@ -229,20 +232,20 @@
     <h2>how many states are there in india?</h2>
 
     <form name="submit7">
-        <input type="radio" name="states" value="34"> 34<br> 
-        <input type="radio" name="states" value="30"> 30<br>
-        <input type="radio" name="states" value="29"> 29<br>
-        <input type="radio" name="states" value="31"> 31<br> 
+        <input type="radio" name="options" value="34"> 34<br>
+        <input type="radio" name="options" value="30"> 30<br>
+        <input type="radio" name="options" value="29"> 29<br>
+        <input type="radio" name="options" value="31"> 31<br>
     <br>
     <button onclick="submit('submit7','radio')" id="showButton" style="width:200px;height:50px">submit</button>
 
     <h2>which is the largest country in the world?</h2>
 
     <form name="submit8">
-        <input type="radio" name="country" value="canada">canada<br>
-        <input type="radio" name="country" value="india">india<br>
-        <input type="radio" name="country" value="pakistan">pakistan<br>
-        <input type="radio" name="country" value="russia">russia<br>
+        <input type="radio" name="options" value="canada">canada<br>
+        <input type="radio" name="options" value="india">india<br>
+        <input type="radio" name="options" value="pakistan">pakistan<br>
+        <input type="radio" name="options" value="russia">russia<br>
     </form>
     <br>
     <button onclick="submit('submit8','radio')" id="showButton" style="width:200px;height:50px">submit</button>
@@ -250,10 +253,10 @@
     <h2>Which planet is known as the Red Planet?</h2>
 
     <form name="submit9">
-        <input type="radio" name="planet" value="mars">mars <br>
-        <input type="radio" name="planet" value="jupiter">jupiter <br>
-        <input type="radio" name="planet" value="earth">earth <br>
-        <input type="radio" name="planet" value="venus">venus <br>
+        <input type="radio" name="options" value="mars">mars <br>
+        <input type="radio" name="options" value="jupiter">jupiter <br>
+        <input type="radio" name="options" value="earth">earth <br>
+        <input type="radio" name="options" value="venus">venus <br>
     </form>
     <br>
     <button onclick="submit('submit9','radio')" id="showButton" style="width:200px;height:50px">submit</button>
@@ -269,16 +272,16 @@
     </div>
 
     <div class="cities">
-           
+
         <h2>London</h2>
         <p>London is the capital of</p>
-        </div> 
+        </div>
         Answer: <input id="submit4" type="text">
         <button onclick="submit('submit4','text')" id="showButton" style="width:200px;height:50px">submit</button>
         <button onclick="showhide('answer4')" id="showButton" style="width:200px;height:50px">show/hide</button>
         <h2 id="answer4" style="display :none;">England</h2>
         <br>
-        
+
         <div class="cities">
         <h2>Paris</h2>
         <p>Paris is the capital of </p>
@@ -288,7 +291,7 @@
         <button onclick="showhide('answer5')" id="showButton" style="width:200px;height:50px">show/hide</button>
         <h2 id="answer5" style="display :none;">France</h2>
         <br>
-        
+
         <div class="cities">
         <h2>Tokyo</h2>
         <p>Tokyo is the capital of </p>
