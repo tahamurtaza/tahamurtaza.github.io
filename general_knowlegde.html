@@ -136,6 +136,17 @@
             }
 
 
+            if (input === "submit10") {
+                if (answer.toUpperCase() === "15") {
+                    alert("Correct answer");
+                    score = score + 1;
+                    submit.value = "";
+                } else {
+                    alert("Wrong answer");
+                    submit.value = "";
+                }
+            }
+
 
 
             // Update score_text
@@ -164,8 +175,9 @@
 
 <body>
 
-
-    <h1>I will show you a picture and you have to guess it!</h1>
+    <img src="con.jpg" alt="">
+    <h1>Q1) I will show you a picture and you have to guess it!</h1>
+    <br>
     <h1>Score: <span id="score_text">0</span></h1>
     <img src="jeff.jpg" alt="">
     <h2>The author of wimpy kid is _______.</h2>
@@ -174,8 +186,8 @@
     <button onclick="showhide('answer1')" id="showButton" style="width:200px;height:50px">show/hide</button>
     <h2 id="answer1" style="display :none;">Jeff Kinney</h2>
     <br>
-    <img src="p.a.jpg" style="width:230px;height:230px">
 
+    <img src="p.a.jpg" style="width:230px;height:230px">
     <h2>The president of USA is _______.</h2>
     Answer: <input id="submit2" type="text">
     <button onclick="submit('submit2','text')" id="showButton" style="width:200px;height:50px">submit</button>
@@ -183,9 +195,8 @@
     <h2 id="answer2" style="display :none;">Donald Trump</h2>
     <br>
 
-
-
     <br>
+
     <img src="sheikh.jpg" style="width:230px;height:230px">
 
     <h2>The president of UAE is _______.</h2>
@@ -195,6 +206,8 @@
     <h2 id="answer3" style="display :none;">sheikh zayed</h2>
     <br>
 
+    <h1>Q2) guess the capital of the country?</h1>
+    <br>
     <div class="cities">
 
         <h2>London</h2>
@@ -207,6 +220,7 @@
         <br>
 
         <div class="cities">
+
         <h2>Paris</h2>
         <p>Paris is the capital of </p>
         </div>
@@ -220,12 +234,14 @@
         <h2>Tokyo</h2>
         <p>Tokyo is the capital of </p>
         </div>
-        Answer: <input id="submit" type="text">
+        Answer: <input id="submit6" type="text">
         <button onclick="submit('submit6','text')" id="showButton" style="width:200px;height:50px">submit</button>
         <button onclick="showhide('answer6')" id="showButton" style="width:200px;height:50px">show/hide</button>
         <h2 id="answer6" style="display :none;">japan</h2>
         <br>
 
+       <h1> Q3) guess the multiple choice answer?<h1>
+ <br>
     <h2>how many states are there in india?</h2>
 
     <form name="submit7">
@@ -258,18 +274,29 @@
     </form>
     <br>
     <button onclick="submit('submit9','radio')" id="showButton" style="width:200px;height:50px">submit</button>
-
+    <br>
+<h1>Q4)the last question<h1>
+<br>
+    <h2>when is the indipendence day in india?</h2>
+    Answer: <input id="submit10"><h2>august<h2><type="text">
+    <br>
+    <button onclick="submit('submit10','text')" id="showButton" style="width:200px;height:50px">submit</button>
+    <br>
+<h1>thanks for the quiz<h1>
+<img src="than.jpg" alt="">
 
     <h1>special thanks to my brother for helping me in this website</h1>
     <img src="ali.jpg" alt="">
+    <img src="moh.jpg" alt="">
 
     <div align=center>
         <h3>Visitors</h3><a href='https://www.counter12.com'><img
                 src='https://www.counter12.com/img-1ZZa75b66zZ6yDAW-59.gif' border='0' alt='free web counter'></a>
         <script type='text/javascript' src='https://www.counter12.com/ad.js?id=1ZZa75b66zZ6yDAW'></script>
     </div>
+<button onclick="('submit11','text')" id="showButton" style="width:200px;height:50px">all questions done</button>
 
-   
+
 </body>
 
 </html>
