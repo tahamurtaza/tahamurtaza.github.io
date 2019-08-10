@@ -5,7 +5,7 @@
 
     <script>
 
-        var score = 0;
+        var score = 0, questionAnswered = 0, totalQuestion = 10;
 
         function showhide(answer) {
             var answer = document.getElementById(answer);
@@ -16,6 +16,11 @@
         }
 
         function submit(input, type) {
+          questionAnswered++;
+
+          if(questionAnswered == 10) {
+            showhide("thanks-div");
+          }
 
             var answer;
 
@@ -277,13 +282,16 @@
     <br>
 <h1>Q4)the last question<h1>
 <br>
-    <h2>when is the indipendence day in india?</h2>
+    <h2>when is the independence day in india?</h2>
     Answer: <input id="submit10"><h2>august<h2><type="text">
     <br>
     <button onclick="submit('submit10','text')" id="showButton" style="width:200px;height:50px">submit</button>
     <br>
-<h1>thanks for the quiz<h1>
-<img src="than.jpg" alt="">
+    <div id="thanks-div" style="display: none">
+      <h1>thanks for the quiz<h1>
+        <img src="than.jpg" alt="">
+    </div>
+
 
     <h1>special thanks to my brother for helping me in this website</h1>
     <img src="ali.jpg" alt="">
@@ -294,7 +302,7 @@
                 src='https://www.counter12.com/img-1ZZa75b66zZ6yDAW-59.gif' border='0' alt='free web counter'></a>
         <script type='text/javascript' src='https://www.counter12.com/ad.js?id=1ZZa75b66zZ6yDAW'></script>
     </div>
-<button onclick="('submit11','text')" id="showButton" style="width:200px;height:50px">all questions done</button>
+<!-- <button onclick="('submit11','text')" id="showButton" style="width:200px;height:50px">all questions done</button> -->
 
 
 </body>
