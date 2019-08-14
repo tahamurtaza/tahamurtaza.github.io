@@ -40,6 +40,9 @@
                     score = score + 1;
                     submit.value = "";
 
+                } else if (answer === "") {
+                    alert("Please enter the answer");
+                    submit.value = "";
                 } else {
                     alert("Wrong answer");
                     submit.value = "";
