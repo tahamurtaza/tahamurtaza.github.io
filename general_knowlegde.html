@@ -186,6 +186,21 @@
 
 
 
+      if (input === "submit11") {
+        if (answer.toUpperCase() === "15") {
+          alert("Correct answer");
+          score = score + 1;
+          submit.value = "";
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        } else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+
       // Update score_text
       document.getElementById("score_text").innerHTML = score;
 
@@ -209,6 +224,7 @@
       margin: 20px;
       padding: 20px;
     }
+    
   </style>
 
 <body background="bac.jpg">
@@ -319,6 +335,14 @@
           <h2>when is the independence day in india?</h2>
           Answer: <input id="submit10">
           <h2>august<h2>
+            <br>
+            <br>
+
+              <h2>plese type your name to see your name in score board</h2>
+              Answer: <input id="submit11" type="text">
+              <button onclick="submit('submit11 +', 'text')" id="showButton" style="width:200px;height:50px">submit</button>
+              <br>
+
               <type="text">
                 <br>
                 <button onclick="submit('submit10','text')" id="showButton"
