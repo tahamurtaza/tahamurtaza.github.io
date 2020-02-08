@@ -186,19 +186,6 @@
 
 
 
-      if (input === "submit11") {
-        if (answer.toUpperCase() === "15") {
-          alert("Correct answer");
-          score = score + 1;
-          submit.value = "";
-        } else if (answer === "") {
-          submit.value = "";
-          alert("please type answer");
-        } else {
-          alert("Wrong answer");
-          submit.value = "";
-        }
-      }
 
 
       // Update score_text
@@ -340,7 +327,7 @@
 
               
               <type="text">
-                <br>
+                <br>                    
                 <button onclick="submit('submit10','text')" id="showButton"
                   style="width:200px;height:50px">submit</button>
                 <br>
