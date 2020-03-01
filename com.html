@@ -1,0 +1,355 @@
+<html>
+
+<head>
+  <title>computer Quiz</title>
+
+  <script>
+
+    var score = 0, questionAnswered = 0, totalQuestion = 10;
+
+    function showhide(answer) {
+      var answer = document.getElementById(answer);
+      if (answer.style.display == "none")
+        answer.style.display = "block";
+      else
+        answer.style.display = "none";
+    }
+
+    function submit(input, type) {
+      questionAnswered++;
+
+      if (questionAnswered == 10) {
+        showhide("thanks-div");
+      }
+
+      var answer;
+
+      if (type === "radio") {
+        answer = document.forms[input].options.value;
+      } else {
+        answer = document.getElementById(input).value;
+      }
+
+
+      var submit = document.getElementById(input);
+
+      if (input === "submit1") {
+        if (answer.toUpperCase() === "HTML") {
+
+          alert("Correct answer");
+
+          score = score + 1;
+          submit.value = "";
+
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        } else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+
+      if (input === "submit2") {
+        if (answer.toUpperCase() === "1936") {
+          alert("Correct answer");
+          score = score + 1;
+          submit.value = "";
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        } else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+      if (input === "submit3") {
+        if (answer.toUpperCase() === "CHARLES BABBAGE") {
+          alert("Correct answer");
+          score = score + 1;
+          submit.value = "";
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        }
+        else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+      if (input === "submit4") {
+        if (answer.toUpperCase() === "PENNSYVANIA") {
+          alert("Correct answer");
+          score = score + 1;
+          submit.value = "";
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        }
+        else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+      if (input === "submit5") {
+        if (answer.toUpperCase() === "JAMES A GOSLING") {
+          alert("Correct answer");
+          score = score + 1;
+          submit.value = "";
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        }
+        else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+      if (input === "submit6") {
+        if (answer.toUpperCase() === "2") {
+          alert("Correct answer");
+          score = score + 1;
+          submit.value = "";
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        }
+        else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+
+      if (input === "submit7") {
+
+
+        if (answer === "Ctrl v") {
+          alert("Correct answer");
+          score = score + 1;
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        }
+        else {
+          alert("Wrong answer");
+        }
+      }
+
+      if (input === "submit8") {
+
+        if (answer === "Ctrl f") {
+          alert("Correct answer");
+          score = score + 1;
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        }
+        else {
+          alert("Wrong answer");
+        }
+      }
+
+      if (input === "submit9") {
+
+        if (answer === "Ctrl x") {
+          alert("Correct answer");
+          score = score + 1;
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        }
+        else {
+          alert("Wrong answer");
+        }
+      }
+
+
+      if (input === "submit10") {
+        if (answer.toUpperCase() === "CHARLES BABBAGE") {
+          alert("Correct answer");
+          score = score + 1;
+          submit.value = "";
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type answer");
+        } else {
+          alert("Wrong answer");
+          submit.value = "";
+        }
+      }
+
+
+
+    
+
+
+      // Update score_text
+      document.getElementById("score_text").innerHTML = score;
+
+
+
+
+    }
+  </script>
+  <style>
+    body {
+
+
+      /* background-size: cover;
+      background-image: url('bac.jpg');
+      background-repeat: no-repeat; */
+    }
+
+    .cities {
+      background-color: black;
+      color: white;
+      margin: 20px;
+      padding: 20px;
+    }
+    
+  </style>
+
+<body background="bac.jpg">
+
+  <img src="con.jpg" alt="">
+  <h1>Score: <span id="score_text">0</span></h1>
+  
+  <br>
+
+
+  <h2>What is the coding language for website.</h2>
+  Answer: <input id="submit1" type="text">
+  <button onclick="submit('submit1', 'text')" id="showButton" style="width:200px;height:50px">submit</button>
+  <button onclick="showhide('answer1')" id="showButton" style="width:200px;height:50px">show/hide</button>
+  <h2 id="answer1" style="display :none;">HTML</h2>
+  <br>
+
+  
+  <h2>when was first computer built(year).</h2>
+  Answer: <input id="submit2" type="text">
+  <button onclick="submit('submit2','text')" id="showButton" style="width:200px;height:50px">submit</button>
+  <button onclick="showhide('answer2')" id="showButton" style="width:200px;height:50px">show/hide</button>
+  <h2 id="answer2" style="display :none;">1936</h2>
+  <br>
+
+  <br>
+
+ 
+
+  <h2>Who made the world's first computer.</h2>
+  Answer: <input id="submit3" type="text">
+  <button onclick="submit('submit3','text')" id="showButton" style="width:200px;height:50px">submit</button>
+  <button onclick="showhide('answer3')" id="showButton" style="width:200px;height:50px">show/hide</button>
+  <h2 id="answer3" style="display :none;">Charles Babbage</h2>
+  <br>
+
+  
+  <br>
+  <div class="cities">
+
+    
+    <p>where was the first computer built</p>
+  </div>
+  Answer: <input id="submit4" type="text">
+  <button onclick="submit('submit4','text')" id="showButton" style="width:200px;height:50px">submit</button>
+  <button onclick="showhide('answer4')" id="showButton" style="width:200px;height:50px">show/hide</button>
+  <h2 id="answer4" style="display :none;">Pennsylvania</h2>
+  <br>
+
+  <div class="cities">
+
+    
+    <p>Who invented Java.</p>
+  </div>
+  Answer: <input id="submit5" type="text">
+  <button onclick="submit('submit5','text')" id="showButton" style="width:200px;height:50px">submit</button>
+  <button onclick="showhide('answer5')" id="showButton" style="width:200px;height:50px">show/hide</button>
+  <h2 id="answer5" style="display :none;">James A Gosling</h2>
+  <br>
+
+  <div class="cities">
+    
+    <p>Which day is celebrated as world Computer Literacy Day</p>
+  </div>
+  Answer: <input id="submit6" type="text">December
+  <button onclick="submit('submit6','text')" id="showButton" style="width:200px;height:50px">submit</button>
+  <button onclick="showhide('answer6')" id="showButton" style="width:200px;height:50px">show/hide</button>
+  <h2 id="answer6" style="display :none;">2 december</h2>
+  <br>
+
+  <h1> Q3) guess the multiple choice answer?<h1>
+      <br>
+      <h2>what is the shortcut for paste?</h2>
+
+      <form name="submit7">
+        <input type="radio" name="options" value="Ctrl p"> Ctrl p<br>
+        <input type="radio" name="options" value="Ctrl z"> Ctrl z<br>
+        <input type="radio" name="options" value="Ctrl v"> Ctrl v<br>
+        <input type="radio" name="options" value="Ctrl s"> Ctrl s<br>
+      </form>
+      <br>
+      <button onclick="submit('submit7','radio')" id="showButton" style="width:200px;height:50px">submit</button>
+
+      <h2>what is the shortcut for find?</h2>
+
+      <form name="submit8">
+        <input type="radio" name="options" value="Ctrl s">Ctrl s<br>
+        <input type="radio" name="options" value="Ctrl f">Ctrl f<br>
+        <input type="radio" name="options" value="Ctrl v">Ctrl v<br>
+        <input type="radio" name="options" value="Ctrl p">Ctrl p<br>
+      </form>
+      <br>
+      <button onclick="submit('submit8','radio')" id="showButton" style="width:200px;height:50px">submit</button>
+
+      <h2>what is the shortcut for cut?</h2>
+
+      <form name="submit9">
+        <input type="radio" name="options" value="Ctrl c">Ctrl c <br>
+        <input type="radio" name="options" value="Ctrl x">Ctrl x <br>
+        <input type="radio" name="options" value="Ctrl f">Ctrl f <br>
+        <input type="radio" name="options" value="Ctrl z">Ctrl z <br>
+      </form>
+      <br>
+      <button onclick="submit('submit9','radio')" id="showButton" style="width:200px;height:50px">submit</button>
+      <br>
+      <h1>Q4)the last question<h1>
+          <br>
+          <h2>who is the father of computer</h2>
+          Answer: <input id="submit10">
+         
+            <br>
+            <br>
+
+              
+              <type="text">
+                <br>
+                <button onclick="submit('submit10','text')" id="showButton"
+                  style="width:200px;height:50px">submit</button>
+                <br>
+                <div id="thanks-div" style="display: none">
+                  <h1>thanks for the quiz<h1>
+                      <img src="than.jpg" alt="">
+                </div>
+
+
+                <h1>special thanks to my brother for helping me in this website</h1>
+                <img src="ali.jpg" alt="">
+                
+
+                <div align=center>
+                  <h3>Visitors</h3><a href='https://www.counter12.com'><img
+                      src='https://www.counter12.com/img-1ZZa75b66zZ6yDAW-59.gif' border='0' alt='free web counter'></a>
+                  <script type='text/javascript' src='https://www.counter12.com/ad.js?id=1ZZa75b66zZ6yDAW'></script>
+                </div>
+                <!-- <button onclick="('submit11','text')" id="showButton" style="width:200px;height:50px">all questions done</button> -->
+
+
+</body>
+
+</html> 
