@@ -1,117 +1,81 @@
 <html>
 
 <head>
-    <title>Taha's Quiz</title>
-    <style>
-        body {
-            background-color: aqua;
+  <title>password</title>
+
+  <script>
+
+    var score = 0, questionAnswered = 0, totalQuestion = 10;
+
+    function showhide(answer) {
+      var answer = document.getElementById(answer);
+      if (answer.style.display == "none")
+        answer.style.display = "block";
+      else
+        answer.style.display = "none";
+    }
+
+    function submit(input, type) {
+      questionAnswered++;
+
+    
+      var answer;
+
+      if (type === "radio") {
+        answer = document.forms[input].options.value;
+      } else {
+        answer = document.getElementById(input).value;
+      }
+
+
+      var submit = document.getElementById(input);
+
+      if (input === "submit1") {
+        if (answer.toUpperCase() === "123456789") {
+
+          alert("welcome to Taha's quiz");
+          window.location.href = 'hello.html';
+        } else if (answer === "") {
+          submit.value = "";
+          alert("please type password");
+        } else {
+          alert("Wrong password");
+          submit.value = "";
         }
+      }
+      // Update score_text
+      document.getElementById("score_text").innerHTML = score;
 
 
-    .btn-group .button {
-      background-color: #66C3DB; /* Green */
-      border: 1px #2cb4d6;
-      color: black;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      cursor: pointer;
-      float: left;
+
+
+    }
+  </script>
+  <style>
+    body {
+
+
+      /* background-size: cover;
+      background-image: url('bac.jpg');
+      background-repeat: no-repeat; */
     }
 
-
-
-    .btn-group .button:hover {
-      background-color: #2cb4d6;
+    .cities {
+      background-color: black;
+      color: white;
+      margin: 20px;
+      padding: 20px;
     }
-    </style>
-</head>
+    
+  </style>
 
 <body background="bac.jpg">
-
-    <h2>Welcome to Taha Murtaza's Quiz</h2>
-<h2> Test your gernal knowlage skills and subjects skill with Taha Murtaza's quiz<h2>
-    <!-- <a href='quiz.html'>Start Quiz Now!</a> -->
-    <br>
-    <img src="quiz time.jpg" style="width:240px;height:150px">
-    <h2>which subject would you like to choose?</h2>
-    <!-- <h2>sorry some subject under construction</h2> -->
-    <!-- <img src="sor.jpg" style="width:340px;height:250px"> -->
-    <form action="general_knowlegde.html">
-        <br>
-        <div class="btn-group">
-            <button class="button"style="width:200px;height:70px">general knowlegde</button>
-    </form>
-    <br>
-    <br>
-    <br>
- <br>
-    <form action="math.html">
-        <br>
-        <div class="btn-group">
-              <button class="button"style="width:200px;height:70px">math</button>
-    </form>
-    <br>
-    <br>
-    <br>
- <br>
-    <form action="english.html">
-        <br>
-        <div class="btn-group">
-            <button class="button"style="width:200px;height:70px">english</button>
-    </form>
- <br>
- <br>
- <br>
- <br>
-    <form action="science.html">
-        <br>
-
-        <div class="btn-group">
-            <button class="button"style="width:200px;height:70px">science</button>
-          </div>
-    </form>
-    <br>
-    <br>
- <br>
+  <h2>please write the password.</h2>
+  Answer: <input id="submit1" type="text">
+  <button onclick="submit('submit1', 'text')" id="showButton" style="width:200px;height:50px">submit</button>
  
-            <form action="reading.html">
-                <br>
-                <div class="btn-group">
-                      <button class="button"style="width:200px;height:70px">reading</button>
-            </form>
-            <br>
-            <br>
-            <br>
-            <br>
-            <form action="dic.html">
-                    <br>
-                    <div class="btn-group">
-                          <button class="button"style="width:200px;height:70px">english dictionary</button>
-                </form>
-                <br>
-                <br>
-                <br>
-                <br>
-                <form action="com.html">
-                    <br>
-                    <div class="btn-group">
-                          <button class="button"style="width:200px;height:70px">computer</button>
-                </form>
-                <br>
-                <br>
-                <br>
-               
-    <div align=center>
-      <h3>Visitors</h3>
-      <a href='https://www.counter12.com'><img
-              src='https://www.counter12.com/img-1ZZa75b66zZ6yDAW-59.gif' border='0' alt='free web counter'></a>
-      <script type='text/javascript' src='https://www.counter12.com/ad.js?id=1ZZa75b66zZ6yDAW'></script>
-  </div>
-
+                
 
 </body>
 
-</html>
+</html> 
