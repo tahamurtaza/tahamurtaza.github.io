@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- #BeginTemplate "../rapidtables.dwt" -->
+
+<head>
+<script async src="/lib/tagmng3.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/lib/rapidz.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/lib/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/lib/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/lib/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/lib/favicon/manifest.json">
+<link rel="mask-icon" href="/lib/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/lib/favicon/favicon.ico">
+<meta name="msapplication-config" content="/lib/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
+<!-- #BeginEditable "doctitle" -->
+<title>Line Graph Maker | Create a line graph</title>
+<meta content="Line graph maker online. Line chart/plot maker &#128200;." name="description">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	h1 { font-size:xx-large; }
+	h2 { font-size:x-large; }
+	.calc3 input[type=color] { height:38px; }
+	.input-group>.form-control { width:40px; }
+	.calc3 input[type=checkbox] { 
+		-ms-transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		padding: 10px;
+  	}
+	.nav-link i { vertical-align:middle; }
+	@media only screen and (max-width: 576px) {
+		.calc3 { padding:10px; }
+		.calc3 td { float:left; width:100%; }
+		.calc3 td:nth-child(2) { clear:left; }
+		.calc3 tr td:nth-child(3) { padding-top:10px; }
+		.calc3 tr td:nth-child(3) select { margin-top:-8px; }
+	}
+	@media only screen and (min-width: 577px) {
+		.calc3 { padding:15px; }
+		.calc3 tr { line-height:40px; }
+	}
+	.calc2 tr td button { width:42px; height:34px; vertical-align:top }
+	.calc2 input[type=checkbox] { 
+		-ms-transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		padding: 10px;
+  	}
+  	#chart_div { margin-top:10px; border:1px solid #ccc }
+	@media (max-width:576px) {
+		.calc2 { margin-left:-5px; width:100% !important; }
+		.calc2 tr td:last-child { width:100%; }
+		.calc2 input[type=text] { width:100%; width: calc(100% - 8px); font-size:large; padding:5px; }
+		.calc2 input[type=checkbox] { margin:10px 0px 0px 10px; }
+		.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:first-child { width:64%; }
+		.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:last-child { width:32%; }
+  		#chart_div { width: 100%; }
+	}
+	@media (min-width:577px) {
+		.calc2 input[type=text] { width: 400px; }
+		.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:first-child { width:300px; }
+		.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:last-child { width:94px; }
+  		#chart_div { width: 580px; height: 400px; }
+	}
+</style>
+<!-- #EndEditable -->
+
+</head>
+
+<body>
+
+<div id="header">
+	<div>
+	<div id="logo" class="box">
+		Line graph maker
+	<!-- #EndEditable -->
+</div>
+
+<div id="top-ad">
+	<!-- RT above responsive -->
+	<ins class="adsbygoogle adslot_1"
+	     data-ad-client="ca-pub-5335356106950684"
+	     data-ad-slot="6506963100"></ins>
+</div>
+	
+<div id="lcol">
+
+	<div id="doc">
+	<!-- #BeginEditable "doctext" -->
+	<h1>Line Graph Maker</h1>
+	<form name="gen" onsubmit="return false;">
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" href="#"><i class="material-icons">show_chart</i> Line Graph</a>
+		</li>
+		
+	</ul>
+	<br>
+	<table class="calc3">
+		<tr>
+			<td>Graph title:</td>
+			<td><input type="text" name="title" placeholder="Graph Title" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Horizontal axis label:</td>
+			<td><input type="text" name="hlabel" placeholder="hLabel" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Vertical axis label:</td>
+			<td><input type="text" name="vlabel" placeholder="vLabel" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Horizontal data type:</td>
+			<td>
+			 <select name="type" onchange="OnTypeChange()" class="form-control">
+				<option>Data labels</option>
+				<option>Data values</option>
+				<option>Data range</option>
+			 </select>
+			</td>
+		</tr>
+		<tr id="xrow0">
+			<td>Data labels:</td>
+			<td><input type="text" name="xdesc" placeholder="name_1 name_2 name_3 name_4" class="form-control"></td>
+		</tr>
+		<tr id="xrow1" style="display:none">
+			<td>Data values:</td>
+			<td><input type="text" name="xdata" placeholder="1 2 3 4" class="form-control"></td>
+		</tr>
+		<tr id="xrow2" style="display:none">
+			<td>Data range:</td>
+			<td><input type="text" name="xrange" placeholder="1 4" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Number of lines:</td>
+			<td>
+			 <select name="num" onchange="OnLineNumChange()" class="form-control">
+				<option selected>1 line</option>
+				<option>2 lines</option>
+				<option>3 lines</option>
+				<option>4 lines</option>
+				<option>5 lines</option>
+				<option>6 lines</option>
+			 </select>
+			</td>
+		</tr>
+		<tr class="datarow[]">
+			<td>Line1 data values:</td>
+			<td class="input-group">
+				<input type="text" name="data[]" placeholder="300 500 100 200" class="form-control">
+				<input type="text" name="desc[]" placeholder="Line1" class="form-control">
+				<input type="color" name="color[]" value="#3366CC">
+			</td>
+		</tr>
+		<tr class="datarow[]" style="display:none">
+			<td>Line2 data values:</td>
+			<td class="input-group">
+				<input type="text" name="data[]" placeholder="300 500 100 200" class="form-control">
+				<input type="text" name="desc[]" placeholder="Line2" class="form-control">
+				<input type="color" name="color[]" value="#DC3912">
+			</td>
+		</tr>
+		<tr class="datarow[]" style="display:none">
+			<td>Line3 data values:</td>
+			<td class="input-group">
+				<input type="text" name="data[]" placeholder="300 500 100 200" class="form-control">
+				<input type="text" name="desc[]" placeholder="Line3" class="form-control">
+				<input type="color" name="color[]" value="#FF9900">
+			</td>
+		</tr>
+		<tr class="datarow[]" style="display:none">
+			<td>Line4 data values:</td>
+			<td class="input-group">
+				<input type="text" name="data[]" placeholder="300 500 100 200" class="form-control">
+				<input type="text" name="desc[]" placeholder="Line4" class="form-control">
+				<input type="color" name="color[]" value="#109618">
+			</td>
+		</tr>
+		<tr class="datarow[]" style="display:none">
+			<td>Line5 data values:</td>
+			<td class="input-group">
+				<input type="text" name="data[]" placeholder="300 500 100 200" class="form-control">
+				<input type="text" name="desc[]" placeholder="Line5" class="form-control">
+				<input type="color" name="color[]" value="#990099">
+			</td>
+		</tr>
+		<tr class="datarow[]" style="display:none">
+			<td>Line6 data values:</td>
+			<td class="input-group">
+				<input type="text" name="data[]" placeholder="300 500 100 200" class="form-control">
+				<input type="text" name="desc[]" placeholder="Line6" class="form-control">
+				<input type="color" name="color[]" value="#0099C6">
+			</td>
+		</tr>
+		<tr>
+			<td>Curved line:</td>
+			<td><input type="checkbox" name="c" onclick="OnDraw()" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<a role="button" title="Draw Graph" onclick="OnDraw()" class="btn btn-light">draw</a>
+				<a role="button" title="Zoom Out" onclick="OnZoomOut()" class="btn btn-light">zoomout</a>
+				<a role="button" title="Zoom In" onclick="OnZoomIn()" class="btn btn-light">zoomin</a>
+				<a href="" role="button" title="Save as PNG Image" id="download" download="line-graph" target="_blank" class="btn btn-light">Download</a>
+			   <a role="button" title="Copy Graph" onclick="OnCopy()" class="btn btn-light">copy</a>
+			   <a role="button" title="Print Graph" onclick="OnPrint()" class="btn btn-light">print</a>
+			   <a role="button" title="Reset" onclick="OnReset()" class="btn btn-light">delete</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><div id="chart_div"></div><div id='png'></div></td>
+		</tr>
+	</table>
+	</form>
+  
+    <!--<div id="img_div" style="position: fixed; top: 0; right: 0; z-index: 10; border: 1px solid #b9b9b9"></div>-->
+	
+	<p>&nbsp;</p>
+	<hr>
+	
+
+
+
+<!-- #BeginEditable "docscript" -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/lib/utils/utils.js"></script>
+<script>
+   var txt,desc,data,c,st,url,imgdata;
+   var x=580;
+   var y=400;
+   
+   $( document ).ready(function() {
+      setGraphSize();          
+      google.charts.load("visualization", "1", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      //$("#pnglnk").click(function(e) { alert("Clicked"); e.preventDefault(); });
+   });
+   
+   function setGraphSize()
+   {
+      var w = window,
+            d = document,
+            e = d.documentElement,
+            g = d.getElementsByTagName('body')[0],
+            xx = w.innerWidth || e.clientWidth || g.clientWidth;
+            if( xx<577 )
+               for(i=0; i<7; i++)
+               {
+               x*=0.9;
+               y*=0.9;
+               }
+   }
+   function OnDraw()
+   {
+      drawChart();
+   }
+   function OnReset()
+   {
+      x=580;
+      y=400;
+      setGraphSize();
+      imgContainer = document.getElementById('img_div');
+      while (imgContainer.firstChild) {
+         imgContainer.removeChild(imgContainer.firstChild);
+      }
+      setTimeout(function(){OnDraw();}, 100);
+      document.gen.reset();
+   }
+   function OnZoomOut()
+   {
+      x*=0.9;
+      y*=0.9;
+      OnDraw();
+   }
+   function OnZoomIn()
+   {
+      x/=0.9;
+      y/=0.9;
+      OnDraw();
+   }
+   function OnTypeChange()
+   {
+      //var xrow = document.gen['xrow[]'];
+      var xrow0 = document.getElementById("xrow0");;
+      var xrow1 = document.getElementById("xrow1");;
+      var xrow2 = document.getElementById("xrow2");;
+      var type = document.gen.type.selectedIndex;
+      if( type==0 )
+      {
+         xrow0.style.display = '';
+         xrow1.style.display = 'none';
+         xrow2.style.display = 'none';
+         }
+         else if( type==1 )
+      {
+         xrow0.style.display = 'none';
+         xrow1.style.display = '';
+         xrow2.style.display = 'none';
+         }
+         else // type==2
+      {
+         xrow0.style.display = 'none';
+         xrow1.style.display = 'none';
+         xrow2.style.display = '';
+         }
+         
+      drawChart();
+   }
+   function OnLineNumChange()
+   {
+      var row = document.getElementsByClassName('datarow[]');
+      var i = document.gen.num.selectedIndex;
+      var k;
+      if( i>0 )
+         for(k=1; k<i+1; k++)
+            row[k].style.display = '';
+         if( i<5 )
+         for(k=i+1; k<6; k++)
+            row[k].style.display = 'none';
+      
+      drawChart();
+   }
+   function drawChart() 
+   {
+      txt = document.gen.title.value;
+      if( txt=='' ) txt="Graph Title";
+      
+      type = document.gen.type.selectedIndex;
+      if( type==0 ) {
+         s = document.gen.xdesc.value;
+         if( s=='' ) s="name_1 name_2 name_3 name_4";
+         desc = s.split(' ');
+         for(var i=0; i<desc.length; i++)
+         {
+            desc[i] = desc[i].replace(/_+/g, function(m) {
+               return m.length === 1 ? ' ' : m;
+            });
+            desc[i] = desc[i].replace(/__/g, '_');
+         }
+      }
+      else if( type==1 ) {
+         s = document.gen.xdata.value;
+         if( s=='' ) s="1 2 3 4";
+         desc = s.split(' ');
+      }
+      else { // type==2
+         s = document.gen.xrange.value;
+         if( s=='' ) s="1 4";
+         s2 = s.split(' ');
+         i1 = parseFloat(s2[0]);
+         i2 = parseFloat(s2[1]);
+         data = document.gen['data[]'];
+         s = data[0].value;
+         if( s=='' ) s="300 500 100 200";
+         s = s.split(' ');
+         num = s.length;
+         di = (i2-i1)/(num-1);
+         for(i=i1,k=0; k<num; i+=di,k++)
+            desc[k] = i;
+         }
+      
+      var num = document.gen.num.selectedIndex+1;
+      var data = document.gen['data[]'];
+      //s = data.value;
+      //if( s=='' ) s="300 500 100 200 200";
+      //d = s.split(' ');
+      d = new Array(num);
+      for(k=0; k<num; k++)
+      {
+         s = data[k].value;
+         if( s=='' ) s="300 500 100 200";
+         s = s.split(' ');
+         d[k] = new Array(s.length);
+         for(i=0; i<s.length; i++){
+            d[k][i] = s[i];		    		
+         }
+      }
+      
+      c = document.gen.c.checked;
+   
+      
+      var arr=new Array();
+      var ldesc = document.gen['desc[]'];
+      arr[0] = new Array(num+1);
+      arr[0][0] = 'Task';
+      for(k=0; k<num; k++)
+      {
+         //arr[0][k+1] = 'Line'+(k+1);
+         ld = ldesc[k].value;
+         if( ld=='' )
+            arr[0][k+1] = 'Line'+(k+1);
+         else
+            arr[0][k+1] = ld;
+      }
+         
+      for(i=0; i<s.length; i++)
+      {
+         arr[i+1] = new Array(num+1);
+         if( type==0 )
+               arr[i+1][0] = desc[i];
+         else
+               arr[i+1][0] = parseFloat(desc[i]);
+         for(k=0; k<num; k++)
+            arr[i+1][k+1] = parseFloat(d[k][i]);
+      }
+      
+      var data2 = google.visualization.arrayToDataTable(arr);
+      
+      hLabel = document.gen.hlabel.value;
+      if( hLabel=='' ) hLabel='hLabel';
+      vLabel = document.gen.vlabel.value;
+      if( vLabel=='' ) vLabel='vLabel';
+      if( c==false )
+         curve = 'none';
+      else
+         curve = 'function';
+         
+      var color = document.gen['color[]'];
+      var optcolors=[];
+      for(var k=0; k<num; k++)
+      {
+         optcolors[k] = color[k].value;
+      }
+      var options = {
+         title: txt,
+         curveType: curve,
+         hAxis: {logScale: false},
+         vAxis: {logScale: false},
+         hAxis: {title: hLabel},
+         vAxis: {title: vLabel},
+         width: x,
+         height: y,
+         colors: optcolors
+      };
+      options.hAxis.gridlines = {color: '#CCC', count: 5};
+      options.vAxis.gridlines = {color: '#CCC', count: 5};
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      google.visualization.events.addListener(chart, 'ready', function () {
+            var data=chart.getImageURI();
+            $("#download").prop("href", data);
+            //$("#download").click();
+            imgdata=data;
+      });
+      chart.draw(data2, options);
+   }
+   function OnCopy()
+   {
+      alert("Press Save button and open image viewer to copy graph");
+   }
+   function OnPrint()
+   {
+      //alert("Press Save button and open image viewer to print graph");
+      var w = window.open('about:blank');
+      var image = new Image();
+      image.src = imgdata;
+      w.document.write(image.outerHTML);
+      //setTimeout(function(){
+      //w.document.write(image.outerHTML);
+      //}, 0);
+   }
+</script>
+<!-- #EndEditable -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

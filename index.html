@@ -6,7 +6,54 @@
         body {
             background-color: aqua;
         }
+        .btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
 
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+        .btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
 
     .btn-group .button {
       background-color: #66C3DB; /* Green */
@@ -49,80 +96,86 @@
     <br>
     <br>
     <br>-->
- <br>
-    <form action="general_knowlegde.html">
-        <br>
-        <div class="btn-group">
-            <button class="button"style="width:200px;height:70px">general knowlegde</button>
-    </form>
-    <br>
-    <br>
-    <br>
- <br>
-    <form action="math.html">
-        <br>
-        <div class="btn-group">
-              <button class="button"style="width:200px;height:70px">math</button>
-    </form>
-    <br>
-    <br>
-    <br>
- <br>
-    <form action="english.html">
-        <br>
-        <div class="btn-group">
-            <button class="button"style="width:200px;height:70px">english</button>
-    </form>
- <br>
- <br>
- <br>
- <br>
-    <form action="science.html">
-        <br>
+    <body>
 
+        <h1>Quizes</h1>
+        
         <div class="btn-group">
-            <button class="button"style="width:200px;height:70px">science</button>
-          </div>
-    </form>
-    <br>
-    <br>
- <br>
- 
-            <form action="reading.html">
-                <br>
-                <div class="btn-group">
-                      <button class="button"style="width:200px;height:70px">reading</button>
+            <form action="general_knowlegde.html">
+          <button style="width:200px;height:70px">General Knowlegde</button>
+        </form>
+        <form action="math.html">
+            <button style="width:200px;height:70px">Math</button>
+          </form>
+          <form action="english.html">
+            <button style="width:200px;height:70px">English</button>
+          </form>
+          <form action="science.html">
+            <button style="width:200px;height:70px">Science</button>
+          </form>
+          <form action="com.html">
+            <button style="width:200px;height:70px">Computer</button>
+          </form>
+        </div>
+
+
+
+        <h1>Reading</h1>
+        
+        <div class="btn-group">
+            <form action="short.html">
+          <button style="width:200px;height:70px">Short Stories</button>
+        </form>
+        <form action="big.html">
+            <button style="width:200px;height:70px">Big Stories</button>
+          </form>
+        </div>
+
+
+
+
+        <h1>Dictionary</h1>
+        
+        <div class="btn-group">
+            <form action="a-f.html">
+          <button style="width:200px;height:70px">A-F</button>
+        </form>
+        <form action="g-l.html">
+            <button style="width:200px;height:70px">G-L</button>
+          </form>
+          <form action="m-r.html">
+            <button style="width:200px;height:70px">M-R</button>
+          </form>
+          <form action="s-z.html">
+              <button style="width:200px;height:70px">S-Z</button>
             </form>
-            <br>
-            <br>
-            <br>
-            <br>
-            <form action="dic.html">
-                    <br>
-                    <div class="btn-group">
-                          <button class="button"style="width:200px;height:70px">english dictionary</button>
-                </form>
-                <br>
-                <br>
-                <br>
-                <br>
-                <form action="com.html">
-                    <br>
-                    <div class="btn-group">
-                          <button class="button"style="width:200px;height:70px">computer</button>
-                </form>
-                <br>
-                <br>
-                <br>
-                <form action="counter.html">
-                    <br>
-                    <div class="btn-group">
-                          <button class="button"style="width:200px;height:70px">Online Counter</button>
-                </form>
-                <br>
-                <br>
-                <br>
-                
+        </div>
+
+
+
+        <h1>Table Maker</h1>
+        
+        <div class="btn-group">
+            <form action="linegraph.html">
+          <button style="width:200px;height:70px">Line Graph Maker</button>
+        </form>
+        <form action="bargraph.html">
+            <button style="width:200px;height:70px">Bar Graph Maker</button>
+          </form>
+          <form action="piechart.html">
+            <button style="width:200px;height:70px">Pie Chart Maker</button>
+          </form>
+        </div>
+        
+        <h1>Counter</h1>
+        
+        <div class="btn-group">
+            <form action="counter.html">
+          <button style="width:200px;height:70px">Online Counter</button>
+        </form>
+        </div>
+        </body>
+        
     <div align=center>
       <h3>Visitors</h3>
       <a href='https://www.counter12.com'><img
