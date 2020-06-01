@@ -1,5 +1,303 @@
-<html>
-    <body>
-        <h2>Will coom soon!</h2>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- #BeginTemplate "../rapidtables.dwt" -->
+
+<head>
+<script async src="/lib/tagmng3.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/lib/rapidz.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/lib/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/lib/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/lib/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/lib/favicon/manifest.json">
+<link rel="mask-icon" href="/lib/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/lib/favicon/favicon.ico">
+<meta name="msapplication-config" content="/lib/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
+<!-- #BeginEditable "doctitle" -->
+<title>Pie chart maker | Create a pie graph online</title>
+<meta content="Pie chart maker online." name="description">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	h1 { font-size:xx-large; }
+	h2 { font-size:x-large; }
+	.calc3 input[type=color] { height:38px; }
+	.input-group>.form-control { width:40px; }
+	.calc3 input[type=checkbox] { 
+		-ms-transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		padding: 10px;
+  	}
+	.nav-link i { vertical-align:middle; }
+	@media only screen and (max-width: 576px) {
+		.calc3 { padding:10px; }
+		.calc3 td { float:left; width:100%; }
+		.calc3 td:nth-child(2) { clear:left; }
+		.calc3 tr td:nth-child(3) { padding-top:10px; }
+		.calc3 tr td:nth-child(3) select { margin-top:-8px; }
+	}
+	@media only screen and (min-width: 577px) {
+		.calc3 { padding:15px; }
+		.calc3 tr { line-height:40px; }
+	}
+	.calc2 tr td button { width:42px; height:34px; vertical-align:top }
+	.calc2 input[type=checkbox] { 
+		-ms-transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		padding: 10px;
+  	}
+  	#chart_div { margin-top:10px; border:1px solid #ccc }
+	@media (max-width:576px) {
+		.calc2 { margin-left:-5px; width:100% !important; }
+		.calc2 tr td:last-child { width:100%; }
+		.calc2 input[type=text] { width:100%; width: calc(100% - 8px); font-size:large; padding:5px; }
+		.calc2 input[type=checkbox] { margin:10px 0px 0px 10px; }
+		/*.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:first-child { width:64%; }
+		.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:last-child { width:32%; }*/
+  		#chart_div { width: 100%; }
+	}
+	@media (min-width:577px) {
+		.calc2 input[type=text] { width: 400px; }
+		/*.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:first-child { width:300px; }
+		.calc2 tr:nth-child(n+9):nth-child(-n+15) td input[type=text]:last-child { width:94px; }*/
+  		#chart_div { width: 580px; height: 400px; }
+	}
+</style>
+<!-- #EndEditable -->
+
+</head>
+
+<body>
+
+<div id="header">
+	<div>
+	Pie chart maker
+	<!-- #EndEditable -->
+</div>
+
+<div id="top-ad">
+	<!-- RT above responsive -->
+	<ins class="adsbygoogle adslot_1"
+	     data-ad-client="ca-pub-5335356106950684"
+	     data-ad-slot="6506963100"></ins>
+</div>
+	
+<div id="lcol">
+
+	<div id="doc">
+	<!-- #BeginEditable "doctext" -->
+	<h1>Pie chart maker</h1>
+    <!--
+	<p>Pie chart maker online.</p>
+	<p>Enter chart parameters and press the <i>Draw Chart</i> button</p>
+    -->
+	<form name="gen" onsubmit="return false;">
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+		
+		<li class="nav-item">
+			<a class="nav-link active" href="#"><i class="material-icons">pie_chart</i> Pie Chart</a>
+		</li>
+		
+	</ul>
+	<br>
+	<table class="calc3">
+		<tr>
+			<td>Enter title:</td>
+			<td><input type="text" name="title" placeholder="My Title" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Enter data labels:</td>
+			<td><input type="text" name="desc" placeholder="name_1 name_2 name_3 name_4 name_5" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Enter data values:</td>
+			<td><input type="text" name="data" placeholder="300 500 100 200 200" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>Select slice text:</td>
+			<td>
+			 <select name="st" onchange="OnDraw()" class="form-control">
+				<option value="percentage">Percentage</option>
+				<option value="value">Value</option>
+				<option value="label">Label</option>
+				<option value="none">None</option>
+			 </select>
+			</td>
+		</tr>
+		<tr>
+			<td>Set 3D chart:</td>
+			<td><input type="checkbox" name="c" onclick="OnDraw()" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<a role="button" title="Draw Graph" onclick="OnDraw()" class="btn btn-light">draw</a>
+				<a role="button" title="Zoom Out" onclick="OnZoomOut()" class="btn btn-light">zoomout</a>
+				<a role="button" title="Zoom In" onclick="OnZoomIn()" class="btn btn-light">zoomin</a>
+				<a href="" role="button" title="Save as PNG Image" id="download" download="pie-chart" target="_blank" class="btn btn-light">download</a>
+			   <a role="button" title="Copy Graph" onclick="OnCopy()" class="btn btn-light">copy</a>
+			   <a role="button" title="Print Graph" onclick="OnPrint()" class="btn btn-light">print</a>
+			   <a role="button" title="Reset" onclick="OnReset()" class="btn btn-light">delete</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><div id="chart_div"></div></td>
+		</tr>
+	</table>
+	</form>
+  
+	<!-- #EndEditable -->
+
+	<!-- #BeginEditable "doctext2" -->
+	<!-- #EndEditable -->
+	</div>
+	
+   
+
+<div id="rcol">	
+	<!-- RT aside responsive -->
+	<ins class="adsbygoogle adslot_2"
+	     data-ad-client="ca-pub-5335356106950684"
+	     data-ad-slot="2437938306"></ins>
+
+	<!-- #BeginEditable "docnav" -->
+	
+
+<!-- #BeginEditable "docscript" -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/lib/utils/utils.js"></script>
+<script>
+   var txt,desc,data,c,st,imgdata;
+   var x=580;
+   var y=400;
+   
+   $( document ).ready(function() {
+      setGraphSize();          
+      GetData();
+      google.charts.load("visualization", "1", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      //$("#pnglnk").click(function(e) { alert("Clicked"); e.preventDefault(); });
+   });
+
+   function setGraphSize()
+   {
+      var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.getElementsByTagName('body')[0],
+      xx = w.innerWidth || e.clientWidth || g.clientWidth;
+      if( xx<577 )
+      for(i=0; i<7; i++)
+      {
+         x*=0.9;
+         y*=0.9;
+      }
+   }
+   function OnDraw()
+   {
+      GetData();
+      
+      drawChart();
+      }
+      function OnReset()
+      {
+      x=580;
+      y=400;
+      setGraphSize();
+      imgContainer = document.getElementById('img_div');
+      while (imgContainer.firstChild) {
+         imgContainer.removeChild(imgContainer.firstChild);
+      }
+      setTimeout(function(){OnDraw();}, 100);
+      document.gen.reset();
+   }
+   function OnCopy()
+   {
+      alert("Press Save button and open image viewer to copy graph");
+   }
+   function OnPrint()
+   {
+      var w = window.open('about:blank');
+      var image = new Image();
+      image.src = imgdata;
+      w.document.write(image.outerHTML);
+   }
+   function OnZoomOut()
+   {
+      x*=0.9;
+      y*=0.9;
+      OnDraw();
+   }
+   function OnZoomIn()
+   {
+      x/=0.9;
+      y/=0.9;
+      OnDraw();
+   }
+   function GetData()
+   {
+      txt = document.gen.title.value;
+      if( txt=='' ) txt="My Title";
+      
+      s = document.gen.desc.value;
+      if( s=='' ) s="name_1 name_2 name_3 name_4 name_5";
+      desc = s.split(' ');
+      for(var i=0; i<desc.length; i++)
+      {
+         desc[i] = desc[i].replace(/_+/g, function(m) {
+            return m.length === 1 ? ' ' : m;
+         });
+         desc[i] = desc[i].replace(/__/g, '_');
+      }
+      
+      s = document.gen.data.value;
+      if( s=='' ) s="300 500 100 200 200";
+      data = s.split(' ');
+      
+      st = document.gen.st.options[document.gen.st.selectedIndex].value;
+      
+      c = document.gen.c.checked;
+   }
+   function drawChart() 
+   {
+      var arr=new Array();
+      arr[0]=['Task', 'Hours per Day'];
+      for(i=0; i<data.length; i++)
+         arr[i+1]=[desc[i], parseFloat(data[i])];
+      var data2 = google.visualization.arrayToDataTable(arr);
+      
+      var options = {
+         title: txt,
+         pieSliceText: st,
+         is3D: c,
+         width: x,
+         height: y
+      };
+      
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+         google.visualization.events.addListener(chart, 'ready', function () {
+            var data=chart.getImageURI();
+            $("#download").prop("href", data);
+            //$("#download").click();
+            imgdata=data;
+         });
+      chart.draw(data2, options);
+   }
+</script>
+<!-- #EndEditable -->
+
+</body>
+
+<!-- #EndTemplate -->
+
 </html>
