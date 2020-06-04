@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Webcam Mirror Online App - See yourself on the screen</title>
+<title>Webcam Mirror Online - See yourself on the screen</title>
 <meta content="Virtual webcam mirror effect online to see yourself on the screen app." name="description">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -68,23 +68,7 @@ html,body {
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#f0f0d0",
-      "text": "#333333"
-    },
-    "button": {
-      "background": "#b0b080",
-      "text": "#333"
-    }
-  },
-  
-  }
-})});
-</script>
+
 </head>
 <body>
 Webcam Mirror
@@ -151,7 +135,6 @@ Webcam Mirror
          video.onloadedmetadata = function(e) {
             video.play();
          };
-         
 
          await sleep(1000);
          const track = mediaStream.getVideoTracks()[0];
