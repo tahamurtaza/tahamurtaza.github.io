@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        
+var UserNumber = 10 ;
+var Counter = 0 ;
+var MaxTries = 5 ;
+
+var RandomNumber = Math.floor(Math.random() * UserNumber) +1;
+
+while (Attemts != RandomNumber){
+    var Attemps = prompt("Please pick a number between 1 and " + UserNumber);
+    counter += 1;
+
+    if (counter >MaxTries){
+        document.write("you have no more tries left.Please press F5 To play again");
+        break
+
+    }
+    if (Attemps == RandomNumber){
+        document.write("Congrates you have the correct number!.");
+        document.write("<p> The Random Numbar was " + RandomNumber + "</p>" );
+        document.write("<p> It took you " + Counter + "Attempts to get the correct answer.")
+    }
+}
+        
+    </body>
+</html>
