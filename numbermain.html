@@ -1,0 +1,84 @@
+<html>
+    <head>
+<style>
+ body {
+  background-color: lightgreen;
+}
+.h4{
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+.h3{
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.dropbtn {
+  background-color: rgb(27, 214, 183);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</style>
+    </head>
+    <body>
+        <h3>
+            Guess The Number!
+            </h3>
+            <h4>
+            Guess Any Number And The Robot Will Tell You The Number You Guessed Is High Or Less.
+        </h4>
+        <h2>
+            Have FUN!
+        </h2>
+
+         <div class="dropdown" >
+            <div class="center"></div>
+    <button class="dropbtn">Choose Level</button>
+    <div class="dropdown-content">
+      <a href="number2.html">Easy(1-10)</a>
+      <a href="number.html">Medium(1-100)</a>
+      <a href="number3.html">Hard(1-500)</a>
+    </div>
+    
+  </div>
+    </body>
+</html>
