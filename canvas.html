@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Page Title</title>
+<style type="text/css">
+body {
+    margin:0; padding:0;
+}
+#content {
+    width:800px;
+    height:500px
+    margin: 0 auto;
+    margin-top:50px;
+    border:1px dotted black;
+}
+
+#title {
+    width:800px;
+    margin: 0 auto;
+    text-align:center;
+    margin-top:30px;
+}
+
+</style>
+</head>
+<body>
+
+    
+
+<div id="title"><h2>HTML Canvas Paint App with Taha's Blog</h2></div>
+<div id="content">
+    <canvas id="myCanvas"></canvas>
+    <img src="ali.jpg" alt="">
+    </div>
+
+    <script type="text/javascript">
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var painting = document.getElementById("content");
+    var paintStyle = getComputedStyle(painting);
+    canvas.width = parseInt(paintStyle.getPropertyValue("width"));
+    canvas.height = parseInt(paintStyle.getPropertyValue("height"));
+
+    var mouse = {x: 0, y: 0};
+
+    canvas.addEventListener('mousemove', function(e) {
+        mouse.x = e.pageX - this.offsetLeft;
+        mouse.y = e.pageY - this.offsetTop;
+    }, false);
+
+    ctx.lineWidth = 100;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = '	#00FF00';
+
+    canvas.addEventListener('mousedown', function(e){
+        
+        ctx.beginPath();
+        ctx.moveTo(mouse.x, mouse.y);
+        canvas.addEventListener('mousemove', onPaint, false);
+    }, false);
+
+    canvas.addEventListener('mouseup', function() {
+        canvas.removeEventListener('mousemove', onPaint, false);
+    }, false);
+
+    var onPaint = function() {
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.stroke();
+    };
+
+
+    
+    </script>
+</body>
+</html>
