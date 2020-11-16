@@ -1,0 +1,220 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=9" /> -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<title>HTML First</title>
+
+		<link rel="stylesheet" href="osshost/css/jquery.mobile-1.0.1.min.css" />
+		<link rel="stylesheet" href="osshost/css/print.css" media="print"/>
+		<link rel="stylesheet" href="osshost/css/popup.css"/>
+		<script type="text/javascript" src="osshost/lib/sjcl.js"></script>
+		<script type="text/javascript" src="osshost/OSSWebServiceDefinition.js"></script>
+		<!-- <script>window["adrum-start-time"] = new Date().getTime();</script><script src="http://code.ws.macmillaneducation.com/integrate/adrum.js"></script> -->
+		<script type="text/javascript" src="compress.js"></script>
+
+		<script type="text/javascript" language="JavaScript">
+			var isNotIE = function()
+			{
+				var ua = navigator.userAgent;
+			    var ieRe = /MSIE (\S+); Windows NT/;
+			    var bail = false;
+
+			    if (ieRe.test(ua)) {
+			      // We also only support Win2003/XPSP2 or better. See:
+			      //  http://msdn.microsoft.com/en-us/library/ms537503%28VS.85%29.aspx
+			      if ((parseFloat(ieRe.exec(ua)[1]) < 6 &&
+			          // 'SV1' indicates SP2, only bail if not SP2 or Win2K3
+			          ua.indexOf('SV1') < 0) || parseFloat(ieRe.exec(ua)[1]) > 9) {
+			          bail = true;
+			      }
+			    } else {
+			      // Not IE
+			      bail = true;
+			    }
+			    return bail;
+    		};
+
+			jQuery(document).ready(function () {
+
+            	if(isNotIE())
+            	{
+        			OSSConfig.populate();
+					//OSSWebServiceController.init();
+					//initializeOSSHost();
+            	}
+            	else if(CFInstall.isAvailable())
+    			{
+     				jQuery("#chromeFrameSeemsInstalledPrompt").css("display", "block");
+    			}
+            	else
+            	{
+            		// show dialog here
+            		jQuery("#chromeFrameInstallPrompt").css("display", "block");
+            		jQuery("#chromeFrameInstallPromptOk").unbind("click").bind("click", function(){
+            			jQuery("#chromeFrameInstallPrompt").css("display", "none");
+            			CFInstall.check({
+                    		mode: "overlay"
+                		});
+
+                	});
+
+            	}
+                // BHC-1
+                if(OSSConfig.CURRENT_PROD.productId == "698" || OSSConfig.CURRENT_PROD.productId == "728"){
+                    jQuery('head').append('<style type="text/css">.OSSTestInteractionStyleTextStandard{color: #000000 !important;}</style>');
+                }
+
+			});
+            
+
+		</script>
+	</head>
+	<body scroll="no">
+
+		<div id="ossAppContainer" style="position:absolute;"></div>
+
+		<div id="ossInteractionContainer"></div>
+
+		<div id="loginPopupView" class="popupPanelContainerNew" style="height:220px;width:330px; float:left; display:none; position: absolute; top:0px; left:0px;" align="left">
+				<div id="headerLogin" class="popupHeader">
+					<div class="headerImg" style="display: none;"></div>
+					<div style="top:5px;" align="left" class="popupTitleTextWhite18New">Authenticate</div>
+				</div>
+	            <div data-role="loginPanelComp" class="popupContentConainerWhiteNew" type="loginPanelComp" id="loginPanel" style="float:left; position: absolute; top:36px; bottom:0px; left:0px; right:0px;">
+	                <div style="position:absolute; top:20px; left:10px; right:15px; background-color:#014D68;">
+	                    <div style="position:absolute; top:0px; left:0px;">
+	                       <div style="width:100px; position:absolute; left:0px; top:0px;" class="usernamePassword15">Username: </div>
+	                        <input type="text" id="usernameInput" name="usernameInput" style="position:absolute; left:100px; top:0px; width:193px;" readonly disabled class="popupTextBlack15"></input>
+	                    </div>
+	                    <div style="position:absolute; top:46px; left:0px;">
+	                        <div tabindex="1" style="width:100px; position:absolute; left:0px; top:0px;" class="usernamePassword15">Password: </div>
+							<input type="password" id="passwordInput" name="passwordInput" style="position:absolute; left:100px; top:0px; width:193px;" class="popupTextBlack15"></input>
+	                    </div>
+	                   <div tabindex="2" style="width:70px; right:0px; position:absolute; top:125px;">
+								<div data-role="buttonComp" id="loginSubmitBtn" style="width:96px; height:24px; padding-top:2px;" class="popupConfirmButtonBlackNew" align="center">OK</div>
+							</div>
+	                </div>
+	            </div>
+	            <!--div data-role="buttonComp" id="loginPanelCloseBtn" class="btnCloseTextBoxToolsPopup" style="display:none;">
+	            </div-->
+	    </div>
+		<div id="loginValidationFailPopupView" class="popupPanelContainer" style="height:150px;width:300px; float:left; display:none; position: absolute; top:0px; left:0px;" align="left">
+           <div id="headerLogin" class="popupHeader">
+                	<div class="headerImg"></div>
+            <div style="width:100%; position:absolute;" align="center" class="popupTitleTextWhite18">
+                Error
+            </div>
+            </div>
+            <div class="popupContentConainerWhite" style="float:left; position: absolute; top:36px; bottom:5px; width:100%">
+                <div style="position:absolute; top:0px; left:10px; right:10px; background-color:#014D68;">
+                    <div style="position:absolute; top:0px; left:0px; width:100%;" align="center">
+                        <div  style="width:100%; position:absolute; left:0px; top:10px;" class="popupTextBlack13">
+                            Please enter your password.
+                        </div>
+                    </div>
+                    <div style="width:100%; position:absolute; top:65px;" align="center">
+                        <div data-role="buttonComp" type="loginValidationFailPanelComp" id="loginValidationFailSubmitBtn" style="width:100px; height:25px;" class="popupConfirmbuttonblackOnly" align="center">
+                            OK
+                            <!--operator name="LoginOperator" value="LoginOperator">
+                            </operator-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loginFailPopupView" class="popupPanelContainer" style="height:150px;width:300px; float:left; display:none; position: absolute; top:0px; left:0px;" align="left">
+           <div id="headerLoginfail" class="popupHeader">
+					<div class="headerImg" style="display: none;"></div>
+					<div style="width:100%; position:absolute; top:5px;" align="center" class="popupTitleTextWhite18">
+		                Error
+		            </div>
+				</div>
+            <div class="popupContentConainerWhite" style="float:left; position: absolute; top:36px; bottom:5px;width:100%; ">
+                <div style="position:absolute; top:0px; left:10px; right:10px; background-color:#014D68;">
+                    <div style="position:absolute; top:0px; left:0px; width:100%;" align="center">
+                        <div style="width:100%; position:absolute; left:0px; top:10px;" class="popupTextBlack13">
+                            Your authentication failed, please try again.
+                        </div>
+                    </div>
+                    <div style="width:100%; position:absolute; top:65px;" align="center">
+                        <div data-role="buttonComp" type="loginFailPanelComp" id="loginFailSubmitBtn" style="width:100px; height:25px; padding-top:5px;" class="popupConfirmbuttonblackOnly" align="center">
+                            OK
+                            <!--operator name="LoginOperator" value="LoginOperator">
+                            </operator-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="chromeFrameInstallPrompt" class="popupPanelContainerChromeFrame">
+           <div id="headerLogin" class="popupHeader">
+                	<div class="headerImg"></div>
+            <div style="width:100%; position:absolute;" align="center" class="popupTitleTextWhite18">
+
+            </div>
+            </div>
+            <div class="popupContentConainerWhite" style="float:left; position: absolute; top:36px; bottom:5px; width:100%">
+                <div style="position:absolute; top:0px; left:10px; right:10px; background-color:#014D68;">
+                    <div style="position:absolute; top:0px; left:0px; width:100%;" align="center">
+                        <div style="width:100%; position:absolute; left:0px; top:10px;" class="popupTextBlack13" align="left">
+                            In order to fully enjoy your experience you will need to install Google Chrome Frame for Internet Explorer 7, 8 and 9..
+                        </div>
+                    </div>
+                    <div style="width:100%; position:absolute; top:65px;" align="center">
+                        <div id="chromeFrameInstallPromptOk" class="popupConfirmButtonBlack">
+                            OK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="chromeFrameSeemsInstalledPrompt" class="popupPanelContainerChromeFrame">
+           <div id="headerLogin" class="popupHeader">
+                 <div class="headerImg"></div>
+            <div style="width:100%; position:absolute;" align="center" class="popupTitleTextWhite18">
+
+            </div>
+            </div>
+            <div class="popupContentConainerWhite" style="float:left; position: absolute; top:36px; bottom:5px; width:100%">
+                <div style="position:absolute; top:0px; left:10px; right:10px; background-color:#014D68;">
+                    <div style="position:absolute; top:0px; left:0px; width:100%;" align="center">
+                        <div style="width:100%; position:absolute; left:0px; top:10px;" class="popupTextBlack13" align="left">
+                            In order to fully enjoy your experience Google Chrome Frame plugin should be installed for Internet Explorer. <br/>It seems Google Chrome Frame is installed but it's not enabled.
+       <br/><br/>
+       Enable the "Google ChromeFrame BHO" from the "Manage add-ons" panel of the Internet Explorer and restart the Internet Explorer.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="iFramePopup" style="position:absolute;z-index:5020; width:100%; height:100%; display:none">
+        	<div style="height:100%; width:100%; background-color: #000000; opacity: 0.5;z-index:-1; position: absolute;"></div>
+        	<iframe frameborder="0"></iframe>
+			<div style="position:absolute; right:0px; top:0px" class="btnIFrameCloseButton" onClick="closeIFrame()"></div>
+		</div>
+
+        <div id="VideoPopup" class="popupPanelContainer" style="height:400px;width:600px; float:left; display:none; position: absolute; top:0px; left:0px;" align="left">
+            <div class="popupContentConainerWhite" style="float:left; position: absolute; top:0px; bottom:5px;width:100%; background-color:#ffffff;">
+                <div style="position:absolute; top:0px; left:10px; right:10px; background-color:#ffffff;">
+                    <div style="position:absolute; top:0px; left:0px; width:100%;" align="center">
+                        <div id="videoSrc" style="width:100%; position:absolute; left:0px; top:10px;" class="popupTextBlack13">
+                            
+                        </div>
+                    </div>
+                    <div style="width:100%; position:absolute; top:350px;" align="center">
+                        <div data-role="buttonComp" type="loginFailPanelComp" id="loginFailSubmitBtn" style="width:100px; height:25px; padding-top:5px;" class="popupConfirmbuttonblackOnly" align="center">
+                            Close   5
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+	</body>
+</html>
